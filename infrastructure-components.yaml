@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: huawei-poc
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: clusterctl-poc
+  namespace: huawei-poc
+data:
+  proof: |
+    This repository has been taken over as part of a
+    harmless proof-of-concept.
+
+    If this ConfigMap exists after running
+    'clusterctl init --infrastructure huawei',
+    it demonstrates that clusterctl downloaded and
+    applied infrastructure-components.yaml from the
+    attacker-controlled GitHub repository.
